@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            padding: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            Введите любое положительное число: <input type="number" id="number">
+            <button onclick="sum()">Result</button>
+            Результат: <span id="sum_result"></span>
+        </div>
+        <div>
+            <select id="options">
+                <option>Выберите свой пол</option>
+                <option value="100">Мужской</option>
+                <option value="110">Женский</option>
+           </select>
+           <input id="weight" placeholder="Укажите свой рост (в см)">
+           <button onclick="weight()">Result</button>
+           Ваш идеальный вес: <span id="weight_result"></span>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
