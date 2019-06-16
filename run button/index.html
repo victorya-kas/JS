@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body > * {
+            box-sizing: border-box;
+        }
+        #run-btn {
+            position: absolute;
+            padding: 20px 15px;
+            background-color: lightcoral; 
+            border-radius: 10x;
+            left: 5px;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="run-btn">Поймай меня, если сможешь!</button>
+    <script>
+       let runBtn = document.getElementById('run-btn');
+       function getRandomInt(min, max){
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        runBtn.addEventListener('mouseover', function() {
+            runBtn.style.left = getRandomInt(5, 70) + "%";
+            runBtn.style.top = getRandomInt(5, 80) + "%";
+            
+        })
+        runBtn.addEventListener('click', function() {
+            alert('Ты выиграл!')
+        })
+    </script>
+</body>
+</html>

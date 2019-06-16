@@ -1,0 +1,78 @@
+body > * {
+    box-sizing: border-box;
+}
+.container {
+   max-width: 600px;
+   margin: 0 auto;
+}
+h3 {
+    font-size: 80px;
+    color: blueviolet;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.timer {
+    font-size: 70px;
+    color: darkseagreen;
+}
+.form-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+}
+input {
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 10px;
+    height: 10px;
+    font-size: 15px;
+}
+span {
+    font-weight: bold;
+    font-size: 20px;
+}
+.button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+button {
+    text-transform: uppercase;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+
+}
+
+#timer-list {
+    padding-inline-start: 0;
+}
+
+
+li {
+    font-size: 40px;
+    list-style: none;
+    color: darksalmon;
+    padding: 15px 0;
+    border-top: 1px solid black;
+}
+
+li:before {
+    content: " ";
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-image: url('https://cdn1.iconfinder.com/data/icons/time-and-date-ii/24/Material_icons-03-60-512.png');
+    background-repeat: no-repeat;
+    background-size: 40px;
+    margin-right: 10px;
+}
+
+.timer {
+    padding: 20px 0;
+    text-align: center;
+}

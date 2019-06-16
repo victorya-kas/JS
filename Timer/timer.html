@@ -5,16 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Timer</title>
-    <style>
-
-    </style>
+    <link href="main.css" rel="stylesheet">
 </head>
 <body>
-    <div class="timer">10</div>
-    <button id="start">Start</button>
-    <button id="stop">Stop</button>
-    <button id="reset">Reset</button>
-    <button id="save">Save result</button>
+    <div class="container">
+        <h3>TIMER</h3>
+        <div class="form-control">
+            <input type="number" id="minutes" placeholder="Enter min">
+            <span>:</span>
+            <input type="number" id="seconds" placeholder="Enter sec">
+        </div>
+         
+        <div class="timer"></div>
+        <section class="button">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+            <button id="save">Save result</button>
+        </section>
+
+        <ul id="timer-list">
+
+        </ul>
+    </div>
+   
 
 
     <script>
@@ -22,35 +36,58 @@
             btnStop = document.getElementById('stop'),
             btnReset = document.getElementById('reset'),
             btnSave = document.getElementById('save');
-
-        let pointer = 10;
-        let timer = document.querySelectorAll('.timer');
+        let minutes = document.getElementById('minutes');
+        let seconds = document.getElementById('seconds');
+        let timer = document.querySelector('.timer');
         let bomb;
+        let ul = document.getElementById('timer-list');
 
         btnStart.addEventListener('click', function() {
-            console.log("Tick Tick")
+            let min = minutes.value;
+            let sec = seconds.value;
             bomb = setInterval(function() {
 
-                timer.innerHTML = pointer;
-                console.log(pointer);
+                timer.innerHTML = min + ":" + sec;
 
-                if (pointer <= 0) {
-                    alert("Game over");
-                    clearInterval(bomb)
+                if(sec < 10) {
+                    timer.innerHTML = min + ":" + "0" + sec;
                 }
-                pointer --;
+                
+                if (sec <= 0) {
+                    min--
+                    sec = 60;
+                } 
+                
+                if (min < 0) {
+                    clearInterval(bomb);
+                    alert("Time is over")
+                }
+
+                if (min < 0, sec<= 30) {
+                    timer.style.color = "red";
+                }
+
+
+               --sec;
+
+               
             }, 1000)
         })
 
         btnStop.addEventListener('click', function(){
             clearInterval(bomb);
-            console.log("You're hero")
         })
 
         btnReset.addEventListener('click', function() {
-             pointer = 10;
-            console.log(pointer);
+             clearInterval(bomb);
+             timer.innerHTML = "00" + ":" + "00"
            
+        })
+
+        btnSave.addEventListener('click', function() {
+            var li = document.createElement("li");
+            ul.appendChild(li);
+            li.innerHTML = timer.innerHTML;
         })
             
     </script>
