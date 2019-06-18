@@ -1,0 +1,35 @@
+h1 {
+    text-transform: uppercase;
+    color: crimson;
+}
+
+#count {
+    padding: 20px;
+    font-size: 80px;
+}
+#cross {
+    color: red;
+}
+#toe {
+    color: green;
+}
+td {
+    font-size: 30px;
+    text-align: center;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+button {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    border-radius: 5pc;
+    margin-right: 20px;
+}
+#restart {
+    background-color: green;
+}
+#reset {
+    background-color: red;
+}
