@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Painter</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <ul id="color-palette">
+        </ul>
+        <ul class="tools-block">
+            <li class="tools-item " id="bg-tool"><i class="fas fa-paint-roller"></i></li>
+            <li class="tools-item " id="brush-tool"><i class="fas fa-paint-brush"></i></li>
+            <li class="tools-item " id="eraser-tool"><i class="fas fa-eraser"></i></li>
+            <li class="width-tool">
+                <input type="range" min="0" max="100" step="5" value="10" id="size">
+                <input type="number" id="size-num" value="10" style="width: 40px">
+            </li>
+        </ul>
+        <canvas id ="canvas" width="800" height="600"></canvas>
+        <button id="clear">Clear</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/js/all.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
